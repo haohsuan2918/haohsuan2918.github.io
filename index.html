@@ -17,9 +17,11 @@
 			<nav id="nav">
 				<ul class="container">
 					<li><a href="#aboutMe">About Me</a></li>
-					<li><a href="#researchInterst">Research Interests</a></li>
-					<li><a href="#news">News</a></li>
+					<li><a href="#education">Education</a></li>
+					<li><a href="#selectedProjects">Selected Projects</a></li>
+					<li><a href="#patents">Patents</a></li>
 					<li><a href="#publications">Publications</a></li>
+					<li><a href="#skills">Technical Skills</a></li>
 				</ul>
 			</nav>
 
@@ -28,34 +30,91 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-4 col-5-large col-12-medium">
-							<span class="image fit"><img src="images/headshot.jpg" alt="" /></span>
+							<div class="profile-image">
+								<img src="images/headshot.jpg" alt="Hao-Hsuan Chang" style="border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" />
+							</div>
 						</div>
 						<div class="col-8 col-7-large col-12-medium">
-							<header>
-								<h1> <strong>Hao-Hsuan Chang</strong></h1>
-								<h4> Email: <strong>haohsuan [at] vt.edu </strong> </h4>
-								<p> [<a href="https://drive.google.com/file/d/1SbsRqENNi4AT7Tu3JpTfewx7QglCz1-l/view?usp=sharing">Curriculum Vitae</a>] [<a href="https://scholar.google.com/citations?user=Ra2fZSAAAAAJ&hl=en">Google Scholar</a>] [<a href="https://github.com/haohsuan2918">Github</a>] [<a href="https://www.linkedin.com/in/hao-hsuan-chang-8862b7170/">Linkedin</a>]</p>
-								<font size="3" color="black">
-								<ul text-align:left>
-								<li><p align="justify">I am a <b>Staff Research Engineer</b> in <b>Standard and Mobility Innovation (SMI) Lab</b> at <a href="https://www.sra.samsung.com/">Samsung Research America</a>.</p>
-								<li><p align="justify">I received the Ph.D. degree in  <a href="https://ece.vt.edu/">Electrical and Computer Engineering</a> at  <a href="https://www.vt.edu/">Virginia Tech</a>, advised by Prof. <a href="http://www.lingjialiu.ece.vt.edu/">Lingjia Liu</a>. Before coming to Virginia Tech, I obtained my M.S. degree in <a href="https://comm.ntu.edu.tw/en/">Communication Engineering</a> and B.S. degree in <a href="https://web.ee.ntu.edu.tw/eng/index.php">Electrical Engineering</a> from <a href="http://www.ntu.edu.tw/english/index.html">National Taiwan University</a></p>  
-								<li><p align="justify">I am interested in <b>Deep Learning</b> techniques for <b>Wireless Sensing</b> (include WiFi, UWB, and mmWave Radar) applications such as vital sign monitoring and motion detection, and <b>Deep Reinforcement Learning</b> techniques for <b>Wireless Communications</b> (include Dynamic Spectrum Sharing, Load Balancing, and Resource Scheduling).</p>
-								</ul>
-								</font>
-							</header>
+							<div class="profile-content">
+								<h1>Hao-Hsuan Chang, Ph.D.</h1>
+								<p class="profile-title"><strong>Staff Research Engineer</strong> | Samsung Research America</p>
+								<p class="profile-email">📧 haohsuanchang2918@gmail.com</p>
+								<div class="profile-links">
+									<a href="https://drive.google.com/file/d/1beZX244AqTTv4t5eABJOlIcn1xyyJU3l/view?usp=sharing" class="profile-link">📄 Curriculum Vitae</a>
+									<a href="https://scholar.google.com/citations?user=Ra2fZSAAAAAJ&hl=en" class="profile-link">🎓 Google Scholar</a>
+									<a href="https://github.com/haohsuan2918" class="profile-link">💻 GitHub</a>
+									<a href="https://www.linkedin.com/in/hao-hsuan-chang-8862b7170/" class="profile-link">💼 LinkedIn</a>
+								</div>
+								<div class="profile-summary">
+									<p><strong>Staff Research Engineer</strong> at <a href="https://www.sra.samsung.com/">Samsung Research America</a> specializing in AI solutions for wireless sensing and communication systems. With over 8 years of experience, I develop low-complexity AI applications optimized for commercial embedded devices, with expertise in time-series prediction, reinforcement learning, recurrent neural networks, and LLM finetuning. I have a strong track record of driving projects from concept to deployment, resulting in high-impact publications, patents, and commercial products.</p>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</article>
 
-		<!-- Work -->
-			<article id="researchInterst" class="wrapper style2">
+		<!-- Education -->
+			<article id="education" class="wrapper style3">
 				<div class="container">
 					<header>
-						<h2>Research Interests</h2>
-						<p>Vital sign monitoring and health sensing through wireless signals</p>
-						<p>Efficient deep reinforcement learning for wireless communications</p>
+						<h2>Education</h2>
 					</header>
+					<div class="row">
+						<div class="col-12">
+							<p><b>Ph.D.</b> <a href="https://www.vt.edu/">Virginia Tech</a>, Electrical and Computer Engineering | Aug 2017–Aug 2021</p>
+							<p><b>M.S.</b> <a href="http://www.ntu.edu.tw/english/index.html">National Taiwan University</a>, Communication Engineering | Sep 2013–Jun 2015</p>
+							<p><b>B.S.</b> <a href="http://www.ntu.edu.tw/english/index.html">National Taiwan University</a>, Electrical Engineering | Sep 2008–Jun 2013</p>
+						</div>
+					</div>
+				</div>
+			</article>
+
+		
+		<!-- Selected Projects -->
+			<article id="selectedProjects" class="wrapper style3">
+				<div class="container">
+					<header>
+						<h2>Selected Projects</h2>
+					</header>
+					<div class="project-list">
+						<div class="project-item">
+							<h3>AI-Powered Sleep Monitoring System</h3>
+							<p>Designed and implemented AI models for sleep stage prediction through fusion of mmWave and UWB radar sensing, incorporating ResNets, transformers, and multi-modal learning. Developed efficient wireless signal processing pipelines in C++ for human localization, motion tracking, and sleep monitoring on embedded devices. Commercialization expected in 2027.</p>
+						</div>
+						<div class="project-item">
+							<h3>Activity Recognition with mmWave Sensing</h3>
+							<p>Created AI models for activity recognition and adult/kid classification using mmWave sensing technology. Developed classification algorithms for human motion detection and activity pattern recognition with high accuracy and low computational complexity.</p>
+						</div>
+						<div class="project-item">
+							<h3>WiFi-Based Multi-Person Respiration Monitoring</h3>
+							<p>Developed CSI amplitude and phase compensation techniques to enable real-time multi-person respiration rate tracking with WiFi signals. Created advanced preprocessing algorithms for anomaly removal and signal compensation, achieving accurate detection of multiple distinct respiration rates from single antenna pairs.</p>
+						</div>
+						<div class="project-item">
+							<h3>Intelligent Human Presence Detection</h3>
+							<p>Designed WiFi-based human presence detection algorithms for indoor environments using two-stage detection systems combining macro-motion sensing with micro-movement and breath signal analysis. Implemented robust occupancy detection with RF interference filtering and motion classification.</p>
+						</div>
+						<div class="project-item">
+							<h3>Dynamic Spectrum Access with Distributive Deep Reinforcement Learning</h3>
+							<p>Designed distributive multi-agent deep reinforcement learning approaches for spectrum sharing and load balancing optimization. Developed lightweight recurrent neural network architectures for time-series prediction of multi-user spectrum access behavior, resulting in 7 publications.</p>
+						</div>
+					</div>
+				</div>
+			</article>
+		
+		<!-- Technical Skills -->
+			<article id="skills" class="wrapper style3">
+				<div class="container">
+					<header>
+						<h2>Technical Skills</h2>
+					</header>
+					<div class="row">
+						<div class="col-12">
+							<p><b>Certification:</b> AWS Certified Machine Learning Engineer, AWS Certified Cloud Practitioner</p>
+							<p><b>Programming:</b> PyTorch, TensorFlow, ONNX, SQL, Python, Matlab, C++</p>
+							<p><b>Deep Learning:</b> LLM finetuning, Transformers, Reinforcement Learning, RNNs, CNNs, XGBoost</p>
+						</div>
+					</div>
 				</div>
 			</article>
 		
@@ -85,206 +144,242 @@
 <!--				</div>-->
 <!--			</article>-->
 
-		<!-- Portfolio -->
-			<article id="publications" class="wrapper style1">
+		<!-- Patents -->
+			<article id="patents" class="wrapper style2">
 				<div class="container">
 					<header>
-						<h2>Publications</h2>
+						<h2>Selected Patents</h2>
+						<p>Commercial impact through AI-powered wireless sensing and health monitoring solutions</p>
 					</header>
-					 <div class="row">
-                                                <div class="column">
-                                                        <div id="photo"><img src="images/TWC_2024_Dyna.jpg" style="float:left; width: 40%;"></div>
-                                                        <div id="content"  style="float:right; width: 55%;">
-                                                                <p align="justify">
-                                                                <font size="3"><a href="https://ieeexplore.ieee.org/abstract/document/10786284"><strong>Dyna-ESN: Efficient Deep Reinforcement Learning for Partially Observable Dynamic Spectrum Access</strong></a></font><br />
-                                                                <font size="2" color="black">Hao-Hsuan Chang*, Nima Mohammadi, Ramin Safavinejad, Yang Yi, and Lingjia Liu</font><br />
-                                                                <font size="2" color="black"><I>IEEE Transactions on Wireless Communications</I>, 2024</font>
-                                                                </p>
-                                                        </div>
-                                                </div>
-                                        </div>
- <div class="row">
-					 <div class="row">
-                                                <div class="column">
-                                                        <div id="photo"><img src="images/TWC_2024_Convergence.jpg" style="float:left; width: 40%;"></div>
-                                                        <div id="content"  style="float:right; width: 55%;">
-                                                                <p align="justify">
-                                                                <font size="3"><a href="https://ieeexplore.ieee.org/abstract/document/10623365"><strong>Deep Reinforcement Learning for Dynamic Spectrum Access: Convergence Analysis and System Design</strong></a></font><br />
-                                                                <font size="2" color="black">Ramin Safavinejad, Hao-Hsuan Chang*, and Lingjia Liu</font><br />
-                                                                <font size="2" color="black"><I>IEEE Transactions on Wireless Communications</I>, 2024</font>
-                                                                </p>
-                                                        </div>
-                                                </div>
-                                        </div>
- <div class="row">
-					 <div class="row">
-                                                <div class="column">
-                                                        <div id="photo"><img src="images/ICASSP_2024.jpg" style="float:left; width: 40%;"></div>
-                                                        <div id="content"  style="float:right; width: 55%;">
-                                                                <p align="justify">
-                                                                <font size="3"><a href="https://ieeexplore.ieee.org/abstract/document/10446996"><strong>Multi-Person Respiration Rate Estimation with Single Pair of Transmit and Receive Antenna</strong></a></font><br />
-                                                                <font size="2" color="black">Hao-Hsuan Chang*, Vishnu Ratnam, Hao Chen, Junsu Choi, and Jianzhong Zhang</font><br />
-                                                                <font size="2" color="black"><I>IEEE International Conference on Acoustics, Speech and Signal Processing</I>, 2024</font>
-                                                                </p>
-                                                        </div>
-                                                </div>
-                                        </div>
- <div class="row">
-					 <div class="row">
-                                                <div class="column">
-                                                        <div id="photo"><img src="images/TWC_2024.jpg" style="float:left; width: 40%;"></div>
-                                                        <div id="content"  style="float:right; width: 55%;">
-                                                                <p align="justify">
-                                                                <font size="3"><a href="https://ieeexplore.ieee.org/abstract/document/10476327"><strong>Optimal preprocessing of WiFi CSI for sensing applications</strong></a></font><br />
-                                                                <font size="2" color="black">Vishnu Ratnam, Hao Chen, Hao Hsuan Chang*, Abhishek Sehgal, and Jianzhong Zhang</font><br />
-                                                                <font size="2" color="black"><I>IEEE Transactions on Wireless Communications</I>, 2024</font>
-                                                                </p>
-                                                        </div>
-                                                </div>
-                                        </div>
- <div class="row">
-					 <div class="row">
-                                                <div class="column">
-                                                        <div id="photo"><img src="images/TWC_2023.jpg" style="float:left; width: 40%;"></div>
-                                                        <div id="content"  style="float:right; width: 55%;">
-                                                                <p align="justify">
-                                                                <font size="3"><a href="https://ieeexplore.ieee.org/abstract/document/10014665"><strong>Federated Multi-Agent Deep Reinforcement Learning (Fed-MADRL) for Dynamic Spectrum Access</strong></a></font><br />
-                                                                <font size="2" color="black">Hao-Hsuan Chang*, Yifei Song, Thinh T. Doan, and Lingjia Liu</font><br />
-                                                                <font size="2" color="black"><I>IEEE Transactions on Wireless Communications</I>, 2023</font>
-                                                                </p>
-                                                        </div>
-                                                </div>
-                                        </div>
- <div class="row">
-                                                <div class="column">
-                                                        <div id="photo"><img src="images/MILCOM_2022.jpg" style="float:left; width: 40%;"></div>
-                                                        <div id="content"  style="float:right; width: 55%;">
-                                                                <p align="justify">
-                                                                <font size="3"><a href="https://ieeexplore.ieee.org/abstract/document/10017708"><strong>MADRL Based Scheduling for 5G and Beyond</strong></a></font><br />
-                                                                <font size="2" color="black">Hao–Hsuan Chang*, R.B.Sai Sree, Hao Chen, Jianzhong Zhang, and Lingjia Liu</font><br />
-                                                                <font size="2" color="black"><I>IEEE Military Communications Conference</I>, 2022</font>
-                                                                </p>
-                                                        </div>
-                                                </div>
-                                        </div>
-					 <div class="row">
-                                                <div class="column">
-                                                        <div id="photo"><img src="images/globecom_2022.jpg" style="float:left; width: 40%;"></div>
-                                                        <div id="content"  style="float:right; width: 55%;">
-                                                                <p align="justify">
-                                                                <font size="3"><a href="https://ieeexplore.ieee.org/abstract/document/10001688"><strong>Federated Dynamic Spectrum Access through Multi-Agent Deep Reinforcement Learning</strong></a></font><br />
-                                                                <font size="2" color="black">Yifei Song, Hao-Hsuan Chang*, Lingjia Liu</font><br />
-                                                                <font size="2" color="black"><I>IEEE Global Communications Conference</I>, 2022</font>
-                                                                </p>
-                                                        </div>
-                                                </div>
-                                        </div>
 					<div class="row">
-                                                <div class="column">
-                                                        <div id="photo"><img src="images/TON_2022.jpg" style="float:left; width: 40%;"></div>
-                                                        <div id="content"  style="float:right; width: 55%;">
-                                                                <p align="justify">
-                                                                <font size="3"><a href="https://ieeexplore.ieee.org/abstract/document/9873839"><strong>Decentralized Deep Reinforcement Learning Meets Mobility Load Balancing</strong></a></font><br />
-                                                                <font size="2" color="black">Hao-Hsuan Chang*, Hao Chen, Jianzhong Zhang, and Lingjia Liu</font><br />
-                                                                <font size="2" color="black"><I>IEEE/ACM Transactions on Networking</I>, 2022</font>
-                                                                </p>
-                                                        </div>
-                                                </div>
-                                        </div>
-                                        <div class="row">
-                                                <div class="column">
-                                                        <div id="photo"><img src="images/IEEE_ACCESS_2021.jpg" style="float:left; width: 40%;"></div>
-                                                        <div id="content"  style="float:right; width: 55%;">
-                                                                <p align="justify">
-                                                                <font size="3"><a href="https://ieeexplore.ieee.org/abstract/document/9632560"><strong>Resource Allocation for D2D Cellular Networks With QoS Constraints: A DC Programming- Based Approach</strong></a></font><br />
-                                                                <font size="2" color="black">Hao-Hsuan Chang*, Lingjia Liu, Jianan Bai, Alex Pidwerbetsky, Allan Berlinsky, Joe Huang, Jonathan D Ashdown, Kurt Turck, and Yang Yi</font><br />
-                                                                <font size="2" color="black"><I>IEEE Access</I>, 2021</font>
-                                                                </p>
-                                                        </div>
-                                                </div>
-                                        </div>
-					<div class="row">
-						<div class="column">
-							<div id="photo"><img src="images/TNNLS2020.jpg" style="float:left; width: 40%;"></div>
-							<div id="content"  style="float:right; width: 55%;">
-								<p align="justify">
-								<font size="3"><a href="https://ieeexplore.ieee.org/document/9246711"><strong>Deep Echo State Q-Network (DEQN) and Its Application in Dynamic Spectrum Sharing for 5G and Beyond</strong></a></font><br />
-								<font size="2" color="black">Hao-Hsuan Chang*, Lingjia Liu, and Yang Yi</font><br />
-								<font size="2" color="black"><I>IEEE Transactions on Neural Networks and Learning Systems</I>, 2020</font>
-								</p>
+						<div class="col-12">
+							<ul>
+								<li><p><b><a href="https://patents.google.com/patent/US12160298B2/en" target="_blank">Multi-antenna WiFi based breathing rate estimation</a></b> - Advanced CSI impairment compensation and multi-dimensional analysis for accurate multi-person breathing rate estimation using WiFi signals.</p></li>
+								<li><p><b><a href="https://patents.google.com/patent/US20240356616A1/en" target="_blank">Wifi csi preprocessing for sensing applications</a></b> - Intelligent preprocessing framework that corrects device impairments and filters interference to enhance WiFi sensing accuracy and reliability.</p></li>
+								<li><p><b><a href="https://patents.google.com/patent/US20240329227A1/en" target="_blank">Wi-fi based human presence and motion detection</a></b> - Two-stage detection system combining macro-motion sensing with micro-movement and breath signal analysis for robust occupancy detection.</p></li>
+								<li><p><b><a href="https://patents.google.com/patent/US20230109057A1/en" target="_blank">Respiration rate detection using wi-fi</a></b> - Anomaly removal and signal compensation techniques enabling accurate detection of multiple distinct respiration rates from single antenna WiFi CSI data.</p></li>
+								<li><p><b><a href="https://patents.google.com/patent/US12474433B2/en" target="_blank">Presence detection and recognition with Wi-Fi</a></b> - Advanced CSI processing with anomaly removal and compensation algorithms for reliable multi-person presence detection and respiration monitoring.</p></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</article>
+
+		<!-- Publications -->
+			<article id="publications" class="wrapper style2">
+				<div class="container">
+					<header>
+						<h2>Selected Publications</h2>
+					</header>
+					
+					<div class="publication-item">
+						<div class="row">
+							<div class="col-4 col-12-medium">
+								<div class="publication-image">
+									<img src="images/IOT2020.jpg" alt="IoT Journal 2018" />
+								</div>
+							</div>
+							<div class="col-8 col-12-medium">
+								<div class="publication-content">
+									<p class="publication-title">
+										<a href="https://ieeexplore.ieee.org/document/8474348/" target="_blank"><strong>Distributive Dynamic Spectrum Access through Deep Reinforcement Learning: A Reservoir Computing Based Approach</strong></a>
+										<span class="citation-count">(270+ citations)</span>
+									</p>
+									<p class="publication-authors">Hao-Hsuan Chang*, Hao Song, Yang Yi, Jianzhong Zhang, Haibo He, and Lingjia Liu</p>
+									<p class="publication-venue"><em>IEEE Internet of Things Journal</em>, 2018</p>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="row">
-						<div class="column">
-							<div id="photo"><img src="images/IOT2020.jpg" style="float:left; width: 40%;"></div>
-							<div id="content"  style="float:right; width: 55%;">
-								<p align="justify">
-								<font size="3"><a href="https://ieeexplore.ieee.org/document/9069218"><strong>Accelerating Model-Free Reinforcement Learning With Imperfect Model Knowledge in Dynamic Spectrum Access</strong></a></font><br />
-								<font size="2" color="black">Lianjun Li, Lingjia Liu, Jianan Bai, Hao-Hsuan Chang*, Hao Chen, Jonathan D. Ashdown, Jianzhong Zhang, and Yang Yi</font><br />
-								<font size="2" color="black"><I>IEEE Internet of Things Journal</I>, 2020</font>
-								</p>
+
+					<div class="publication-item">
+						<div class="row">
+							<div class="col-4 col-12-medium">
+								<div class="publication-image">
+									<img src="images/WCL2020.jpg" alt="WCL 2019" />
+								</div>
+							</div>
+							<div class="col-8 col-12-medium">
+								<div class="publication-content">
+									<p class="publication-title">
+										<a href="https://ieeexplore.ieee.org/document/8944280/" target="_blank"><strong>Deep Residual Learning Meets OFDM Channel Estimation</strong></a>
+										<span class="citation-count">(200+ citations)</span>
+									</p>
+									<p class="publication-authors">Lianjun Li, Hao Chen, Hao-Hsuan Chang*, and Lingjia Liu</p>
+									<p class="publication-venue"><em>IEEE Wireless Communications Letters</em>, 2019</p>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="row">
-						<div class="column">
-							<div id="photo"><img src="images/TWC2020_Learning_for_detection.jpg" style="float:left; width: 40%;"></div>
-							<div id="content"  style="float:right; width: 55%;">
-								<p align="justify">
-								<font size="3"><a href="https://ieeexplore.ieee.org/document/9020011"><strong>Learning for Detection: MIMO-OFDM Symbol Detection Through Downlink Pilots</strong></a></font><br />
-								<font size="2" color="black">Zhou zhou, Lingjia Liu, and Hao-Hsuan Chang*</font><br />
-								<font size="2" color="black"><I>IEEE Transactions on Wireless Communications</I>, 2020</font>
-								</p>
+
+					<div class="publication-item">
+						<div class="row">
+							<div class="col-4 col-12-medium">
+								<div class="publication-image">
+									<img src="images/TNNLS2020.jpg" alt="TNNLS 2020" />
+								</div>
+							</div>
+							<div class="col-8 col-12-medium">
+								<div class="publication-content">
+									<p class="publication-title">
+										<a href="https://ieeexplore.ieee.org/document/9246711/" target="_blank"><strong>Deep Echo State Q-Network (DEQN) and Its Application in Dynamic Spectrum Sharing for 5G and Beyond</strong></a>
+										<span class="citation-count">(80+ citations)</span>
+									</p>
+									<p class="publication-authors">Hao-Hsuan Chang*, Lingjia Liu, and Yang Yi</p>
+									<p class="publication-venue"><em>IEEE Transactions on Neural Networks and Learning Systems</em>, 2020</p>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="row">
-						<div class="column">
-							<div id="photo"><img src="images/WCL2020.jpg" style="float:left; width: 40%;"></div>
-							<div id="content"  style="float:right; width: 55%;">
-								<p align="justify">
-								<font size="3"><a href="https://ieeexplore.ieee.org/document/8944280"><strong>Deep Residual Learning Meets OFDM Channel Estimation</strong></a></font><br />
-								<font size="2" color="black">Lianjun Li, Hao Chen, Hao-Hsuan Chang*, and Lingjia Liu </font><br />
-								<font size="2" color="black"><I>IEEE Wireless Communications Letters</I>, 2020</font>
-								</p>
+
+					<div class="publication-item">
+						<div class="row">
+							<div class="col-4 col-12-medium">
+								<div class="publication-image">
+									<img src="images/ICASSP_2024.jpg" alt="ICASSP 2024" />
+								</div>
+							</div>
+							<div class="col-8 col-12-medium">
+								<div class="publication-content">
+									<p class="publication-title">
+										<a href="https://ieeexplore.ieee.org/document/10446996/" target="_blank"><strong>Multi-Person Respiration Rate Estimation with Single Pair of Transmit and Receive Antenna</strong></a>
+									</p>
+									<p class="publication-authors">Hao-Hsuan Chang*, Vishnu Ratnam, Hao Chen, Junsu Choi, and Jianzhong Zhang</p>
+									<p class="publication-venue"><em>IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</em>, 2024</p>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="row">
-						<div class="column">
-							<div id="photo"><img src="images/globalComm2019.jpg" style="float:left; width: 40%;"></div>
-							<div id="content"  style="float:right; width: 55%;">
-								<p align="justify">
-								<font size="3"><a href="https://ieeexplore.ieee.org/document/9013396"><strong>Maximizing System Throughput in D2D Networks using Alternative DC Programming</strong></a></font><br />
-								<font size="2" color="black">Hao-Hsuan Chang*, Lingjia Liu, Hao Song, Alex Pidwerbetsky, Allan Berlinsky, Jonathan Ashdown, Kurt Turck, and Yang Yi</font><br />
-								<font size="2" color="black"><I>IEEE Global Communications Conference</I>, 2019</font>
-								</p>
+
+					<div class="publication-item">
+						<div class="row">
+							<div class="col-4 col-12-medium">
+								<div class="publication-image">
+									<img src="images/TON_2022.jpg" alt="TON 2022" />
+								</div>
+							</div>
+							<div class="col-8 col-12-medium">
+								<div class="publication-content">
+									<p class="publication-title">
+										<a href="https://ieeexplore.ieee.org/document/9873839/" target="_blank"><strong>Decentralized Deep Reinforcement Learning Meets Mobility Load Balancing</strong></a>
+									</p>
+									<p class="publication-authors">Hao-Hsuan Chang*, Hao Chen, Jianzhong Zhang, and Lingjia Liu</p>
+									<p class="publication-venue"><em>IEEE/ACM Transactions on Networking</em>, 2022</p>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="row">
-						<div class="column">
-							<div id="photo"><img src="images/architecture.jpg" style="float:left; width: 40%;"></div>
-							<div id="content"  style="float:right; width: 55%;">
-								<p align="justify">
-								<font size="3"><a href="https://ieeexplore.ieee.org/document/8474348"><strong>Distributive Dynamic Spectrum Access through Deep Reinforcement Learning: A Reservoir Computing Based Approach</strong></a></font><br />
-								<font size="2" color="black">Hao-Hsuan Chang*, Hao Song, Yang Yi, Jianzhong Zhang, Haibo He, and Lingjia Liu</font><br />
-								<font size="2" color="black"><I>IEEE Internet of Things Journal</I>, 2019</font><br />
-								<font size="2"><a href="https://github.com/haohsuan2918/DQN_RC_DSA_IOT2019"><strong>Code</strong></a></font><br />
-								</p>
+
+					<div class="publication-item">
+						<div class="row">
+							<div class="col-4 col-12-medium">
+								<div class="publication-image">
+									<img src="images/TWC_2023.jpg" alt="TWC 2023" />
+								</div>
+							</div>
+							<div class="col-8 col-12-medium">
+								<div class="publication-content">
+									<p class="publication-title">
+										<a href="https://ieeexplore.ieee.org/document/10014665/" target="_blank"><strong>Federated Multi-Agent Deep Reinforcement Learning (Fed-MADRL) for Dynamic Spectrum Access</strong></a>
+									</p>
+									<p class="publication-authors">Hao-Hsuan Chang*, Yifei Song, Thinh T. Doan, and Lingjia Liu</p>
+									<p class="publication-venue"><em>IEEE Transactions on Wireless Communications</em>, 2023</p>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="row">
-						<div class="column">
-							<div id="photo"><img src="images/INFOCOM_WKSHPS_2019.jpg" style="float:left; width: 40%;"></div>
-							<div id="content"  style="float:right; width: 55%;">
-								<p align="justify">
-								<font size="3"><a href="https://ieeexplore.ieee.org/document/8845152"><strong>Deep Q-Network Based Power Allocation Meets Reservoir Computing in Distributed Dynamic Spectrum Access Networks</strong></a></font><br />
-								<font size="2" color="black">Hao Song, Lingjia Liu, Hao-Hsuan Chang*, Jonathan Ashdown, and Yang Yi</font><br />
-								<font size="2" color="black"><I>IEEE Conference on Computer Communications Workshops</I>, 2019</font>
-								</p>
+
+					<div class="publication-item">
+						<div class="row">
+							<div class="col-4 col-12-medium">
+								<div class="publication-image">
+									<img src="images/TWC_2024_Dyna.jpg" alt="TWC 2024" />
+								</div>
+							</div>
+							<div class="col-8 col-12-medium">
+								<div class="publication-content">
+									<p class="publication-title">
+										<a href="https://ieeexplore.ieee.org/document/10786284/" target="_blank"><strong>Dyna-ESN: Efficient Deep Reinforcement Learning for Partially Observable Dynamic Spectrum Access</strong></a>
+									</p>
+									<p class="publication-authors">Hao-Hsuan Chang*, Nima Mohammadi, Ramin Safavinejad, Yang Yi, and Lingjia Liu</p>
+									<p class="publication-venue"><em>IEEE Transactions on Wireless Communications</em>, 2024</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="publication-item">
+						<div class="row">
+							<div class="col-4 col-12-medium">
+								<div class="publication-image">
+									<img src="images/TWC_2024_Convergence.jpg" alt="TWC 2024" />
+								</div>
+							</div>
+							<div class="col-8 col-12-medium">
+								<div class="publication-content">
+									<p class="publication-title">
+										<a href="https://ieeexplore.ieee.org/document/10623365/" target="_blank"><strong>Deep Reinforcement Learning for Dynamic Spectrum Access: Convergence Analysis and System Design</strong></a>
+									</p>
+									<p class="publication-authors">Ramin Safavinejad, Hao-Hsuan Chang*, and Lingjia Liu</p>
+									<p class="publication-venue"><em>IEEE Transactions on Wireless Communications</em>, 2024</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="publication-item">
+						<div class="row">
+							<div class="col-4 col-12-medium">
+								<div class="publication-image">
+									<img src="images/TWC_2024.jpg" alt="TWC 2024" />
+								</div>
+							</div>
+							<div class="col-8 col-12-medium">
+								<div class="publication-content">
+									<p class="publication-title">
+										<a href="https://ieeexplore.ieee.org/document/10476327/" target="_blank"><strong>Optimal preprocessing of WiFi CSI for sensing applications</strong></a>
+									</p>
+									<p class="publication-authors">Vishnu Ratnam, Hao Chen, Hao Hsuan Chang*, Abhishek Sehgal, and Jianzhong Zhang</p>
+									<p class="publication-venue"><em>IEEE Transactions on Wireless Communications</em>, 2024</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="publication-item">
+						<div class="row">
+							<div class="col-4 col-12-medium">
+								<div class="publication-image">
+									<img src="images/MILCOM_2022.jpg" alt="MILCOM 2022" />
+								</div>
+							</div>
+							<div class="col-8 col-12-medium">
+								<div class="publication-content">
+									<p class="publication-title">
+										<a href="https://ieeexplore.ieee.org/document/10017708/" target="_blank"><strong>MADRL Based Scheduling for 5G and Beyond</strong></a>
+									</p>
+									<p class="publication-authors">Hao–Hsuan Chang*, R.B.Sai Sree, Hao Chen, Jianzhong Zhang, and Lingjia Liu</p>
+									<p class="publication-venue"><em>IEEE Military Communications Conference</em>, 2022</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="publication-item">
+						<div class="row">
+							<div class="col-4 col-12-medium">
+								<div class="publication-image">
+									<img src="images/TWC2020_Learning_for_detection.jpg" alt="TWC 2020" />
+								</div>
+							</div>
+							<div class="col-8 col-12-medium">
+								<div class="publication-content">
+									<p class="publication-title">
+										<a href="https://ieeexplore.ieee.org/document/9020011/" target="_blank"><strong>Learning for Detection: MIMO-OFDM Symbol Detection Through Downlink Pilots</strong></a>
+									</p>
+									<p class="publication-authors">Zhou Zhou, Lingjia Liu, and Hao-Hsuan Chang*</p>
+									<p class="publication-venue"><em>IEEE Transactions on Wireless Communications</em>, 2020</p>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -298,6 +393,60 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			
+			<!-- Modern Academic CV Scripts -->
+			<script>
+				// Smooth scroll animations
+				$(document).ready(function() {
+					// Animate sections on scroll
+					$(window).scroll(function() {
+						$('.wrapper').each(function() {
+							var elementTop = $(this).offset().top;
+							var elementBottom = elementTop + $(this).outerHeight();
+							var viewportTop = $(window).scrollTop();
+							var viewportBottom = viewportTop + $(window).height();
+							
+							if (elementBottom > viewportTop && elementTop < viewportBottom) {
+								$(this).addClass('visible');
+							}
+						});
+					});
+					
+					// Initial check for visible sections
+					$(window).trigger('scroll');
+					
+					// Smooth scrolling for navigation links
+					$('a[href^="#"]').on('click', function(event) {
+						var target = $(this.getAttribute('href'));
+						if (target.length) {
+							event.preventDefault();
+							$('html, body').stop().animate({
+								scrollTop: target.offset().top - 60
+							}, 800);
+						}
+					});
+					
+					// Update active navigation based on scroll position
+					$(window).scroll(function() {
+						var scrollPosition = $(window).scrollTop() + 100;
+						
+						$('#nav a').each(function() {
+							var currentLink = $(this);
+							var refElement = $(currentLink.attr('href'));
+							
+							if (refElement.length) {
+								if (refElement.position().top <= scrollPosition && 
+									refElement.position().top + refElement.height() > scrollPosition) {
+									$('#nav a').removeClass('active');
+									currentLink.addClass('active');
+								} else {
+									currentLink.removeClass('active');
+								}
+							}
+						});
+					});
+				});
+			</script>
 
 	</body>
 </html>
