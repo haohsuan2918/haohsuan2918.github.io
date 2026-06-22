@@ -1,0 +1,428 @@
+\documentclass[10pt, letterpaper]{article}
+% Packages:
+\usepackage{academicons}
+\usepackage[
+    ignoreheadfoot, % set margins without considering header and footer
+    top=2 cm, % seperation between body and page edge from the top
+    bottom=2 cm, % seperation between body and page edge from the bottom
+    left=2 cm, % seperation between body and page edge from the left
+    right=2 cm, % seperation between body and page edge from the right
+    footskip=1.0 cm, % seperation between body and footer
+    % showframe % for debugging 
+]{geometry} % for adjusting page geometry
+\usepackage{titlesec} % for customizing section titles
+\usepackage{tabularx} % for making tables with fixed width columns
+\usepackage{array} % tabularx requires this
+\usepackage[dvipsnames]{xcolor} % for coloring text
+\definecolor{primaryColor}{RGB}{0, 79, 144} % define primary color
+\usepackage{enumitem} % for customizing lists
+\usepackage{fontawesome5} % for using icons
+\usepackage{amsmath} % for math
+\usepackage[
+    pdftitle={Hao-Hsuan Chang's CV},
+    pdfauthor={Hao-Hsuan Chang},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref} % for links, metadata and bookmarks
+\usepackage[pscoord]{eso-pic} % for floating text on the page
+\usepackage{calc} % for calculating lengths
+\usepackage{bookmark} % for bookmarks
+\usepackage{lastpage} % for getting the total number of pages
+\usepackage{changepage} % for one column entries (adjustwidth environment)
+\usepackage{paracol} % for two and three column entries
+\usepackage{ifthen} % for conditional statements
+\usepackage{needspace} % for avoiding page brake right after the section title
+\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+
+% Ensure that generate pdf is machine readable/ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    % \usepackage[T1]{fontenc} % this breaks sb2nov
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+
+
+% Some settings:
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+\pagestyle{empty} % no header or footer
+\setcounter{secnumdepth}{0} % no section numbering
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\setlength{\columnsep}{0cm} % set column seperation
+\makeatletter
+\let\ps@customFooterStyle\ps@plain % Copy the plain style to customFooterStyle
+
+\makeatother
+
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+
+\titlespacing{\section}{
+    % left space:
+    -1pt
+}{
+    % top space:
+    0.3 cm
+}{
+    % bottom space:
+    0.2 cm
+} % section title spacing
+
+\renewcommand\labelitemi{$\circ$} % custom bullet points
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.4 cm + 10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights for bullet entries
+
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0.2 cm + 0.00001 cm
+    }{
+        0.2 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+} % new environment for one column entries
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 3.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for two column entries
+
+\newenvironment{twocolentryPub}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 2.4 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for two column entries
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+} % new environment for the header
+
+\newcommand{\placelastupdatedtext}{% \placetextbox{<horizontal pos>}{<vertical pos>}{<stuff>}
+  \AddToShipoutPictureFG*{% Add <stuff> to current page foreground
+    \put(
+        \LenToUnit{\paperwidth-2 cm-0.2 cm+0.05cm},
+        \LenToUnit{\paperheight-1.0 cm}
+    ){\vtop{{\null}\makebox[0pt][c]{
+        \small\color{gray}\textit{}\hspace{\widthof{Last updated in September 2024}}
+    }}}%
+  }%
+}%
+
+% save the original href command in a new command:
+\let\hrefWithoutArrow\href
+
+% new command for external links:
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
+
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{}
+
+    \placelastupdatedtext
+    \begin{header}
+        \textbf{\fontsize{24 pt}{24 pt}\selectfont Hao-Hsuan Chang}
+
+        \vspace{0.2 cm}
+
+        \normalsize
+        
+        \mbox{\hrefWithoutArrow{mailto:william29181@gmail.com}{\color{black}{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}haohsuanchang2918@gmail.com}}%ha
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://haohsuan2918.github.io/}{\color{black}{\footnotesize\faLink}\hspace*{0.13cm}Homepage}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://scholar.google.com/citations?user=Ra2fZSAAAAAJ&hl=en}{\color{black}{\faGraduationCap}\hspace*{0.13cm}Google Scholar}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://www.linkedin.com/in/hao-hsuan-chang-8862b7170}{\color{black}{\footnotesize\faLinkedinIn}\hspace*{0.13cm}Linkedin}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://github.com/haohsuan2918}{\color{black}{\footnotesize\faGithub}\hspace*{0.13cm}Github}}%
+        
+        
+
+
+        
+
+        
+    \end{header}
+
+    \vspace{0.2 cm - 0.2 cm}
+
+
+    \section{Professional Summary}
+    I am currently a Staff Research Engineer at Samsung Research America, specializing in AI solutions for wireless sensing and communication systems. With over 8 years of experience, I have developed a broad range of low-complexity AI applications optimized for commercial embedded devices, with expertise in time-series prediction, reinforcement learning, recurrent neural networks, and LLM finetuning. I have a strong track record of driving projects from concept to deployment, resulting in high-impact publications, patents, and commercial products.
+
+    
+    \section{Experience}
+
+        \begin{twocolentry}{  
+            
+        {\small \textit{Mar 2025–Present}}
+        
+        {\small \textit{Sep 2021–Feb 2025}}}
+
+            \textbf{Staff Research Engineer}, \textit{Samsung Research America}
+
+            \textbf{Senior Research Engineer}, \textit{Samsung Research America}
+
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Designed AI models for time-series–based sleep stage prediction using wireless signals, leveraging residual learning, transformers, and contrastive learning techniques; achieved accuracy comparable to clinical sleep study, with commercialization planned for 2027 (2 publications, 4 patents).
+
+                \item Fine-tuned LLMs using predicted sleep stages and contextual data to deliver personalized sleep coaching and actionable health insights, enabling human-like interaction and improving user engagement.
+
+                
+                \item Optimized and deployed AI models on embedded devices by applying CNN quantization and TensorFlow Lite optimization for low-latency inference, and converting Python-based models to C\texttt{++} with multi-threading and optimized data pipelines to achieve real-time sleep stage prediction on commercial hardware.
+
+                \item Designed an AI model to detect human count in different areas using CBRS wireless signals; presented a demo at the FIFA World Cup fan festival at Dallas Fair Park; built a multi-camera monitoring system using homographies to collect training data ground truth.
+                
+                % Reduced model complexity through CNN quantization techniques and TensorFlow Lite optimization, enabling compact AI models suitable for deployment on commercial embedded devices.
+
+
+                % \item Converted Python-based AI models to C\texttt{++} for embedded deployment, integrating multi-threading and optimizing the data preprocessing pipeline to enable real-time sleep stage inference on embedded devices.
+            \end{highlights}
+        \end{onecolentry}
+
+
+        \vspace{0.10 cm}
+
+        \begin{twocolentry}{
+
+        {\small \textit{Aug 2019–Dec 2019}}}
+            \textbf{Research Intern}, \textit{Samsung Research America}
+
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Designed deep reinforcement learning-based load balancing optimization (1 publication).
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.10 cm}
+
+        \begin{twocolentry}{
+
+        {\small \textit{Aug 2017–Aug 2021}}}
+            \textbf{Graduate Research Assistant}, \textit{Virginia Tech}
+
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Designed distributive multi-agent deep reinforcement learning and lightweight recurrent neural network architectures for time-series prediction of multi-user spectrum access behavior (7 publications).
+            \end{highlights}
+        \end{onecolentry}
+
+
+
+    
+    \section{Education}
+        \begin{twocolentry}{
+        {\small \textit{Aug 2017–Aug 2021}}}
+            \makebox[1.5cm]{Ph.D}   \textbf{Virginia Tech}, Electrical and Computer Engineering 
+        \end{twocolentry}
+
+        \vspace{0.05 cm}
+
+        \begin{twocolentry}{
+        {\small \textit{Sep 2013–Jun 2015}}}
+            \makebox[1.5cm]{M.S}    \textbf{National Taiwan University}, Communication Engineering
+        \end{twocolentry}
+
+        \vspace{0.05 cm}
+
+        \begin{twocolentry}{
+        {\small \textit{Sep 2008–Jun 2013}}}
+            \makebox[1.5cm]{B.S}   \textbf{National Taiwan University}, Electrical Engineering 
+        \end{twocolentry}
+
+        % \vspace{0.10 cm}
+
+        
+    \section{Technical Skills}
+
+        \begin{onecolentry}
+            \textbf{Certification:} AWS Certified Machine Learning Engineer, AWS Certified Cloud Practitioner
+        \end{onecolentry}
+
+        \vspace{0.1 cm}
+        
+        \begin{onecolentry}
+            \textbf{Programming:} Python, C\texttt{++}, SQL, Matlab
+        \end{onecolentry}
+
+        \vspace{0.1 cm}
+
+        \begin{onecolentry}
+            \textbf{MLOps \& Tools:} PyTorch, TensorFlow, ONNX, Kubernetes
+        \end{onecolentry}
+
+        \vspace{0.1 cm}
+
+        \begin{onecolentry}
+            \textbf{Deep Learning:} LLM finetuning, Transformers, Reinforcement Learning, RNNs, CNNs, XGBoost
+        \end{onecolentry}
+
+
+
+
+
+
+
+    
+
+    \section{Selected Publications}
+
+
+
+        
+        \begin{samepage}
+        
+            \begin{twocolentryPub}{
+                {\footnotesize IoT 2018}
+            }
+                {\footnotesize \textbf{Distributive Dynamic Spectrum Access through Deep Reinforcement Learning} } [270+ citations]
+            \end{twocolentryPub}
+
+            \vspace{0.05 cm}
+
+            \begin{twocolentryPub}{
+                {\footnotesize WCL 2019}
+            }
+                {\footnotesize \textbf{Deep Residual Learning Meets OFDM Channel Estimation}} [200+ citations]
+            \end{twocolentryPub}
+
+            \vspace{0.05 cm}
+
+            \begin{twocolentryPub}{
+                {\footnotesize TNNLS 2020}
+            }
+                {\footnotesize \textbf{DEQN and Its Application in Dynamic Spectrum Sharing for 5G and Beyond}} [80+ citations]
+            \end{twocolentryPub}
+
+            \vspace{0.05 cm}
+
+            \begin{twocolentryPub}{
+                {\footnotesize TWC 2020}
+            }
+                {\footnotesize \textbf{Learning for detection: MIMO-OFDM symbol detection through downlink pilots}} [70+ citations]
+            \end{twocolentryPub}
+
+            \vspace{0.05 cm}
+
+            \begin{twocolentryPub}{
+                {\footnotesize ICASSP 2024}
+            }
+                {\footnotesize \textbf{Multi-Person Respiration Rate Estimation with Single Pair of Transmit and Receive Antenna}}
+            \end{twocolentryPub}
+
+            \vspace{0.05 cm}
+
+            % \begin{twocolentryPub}{
+            %     {\footnotesize TWC 2024}
+            % }
+            %     {\footnotesize \textbf{Efficient Deep Reinforcement Learning for Partially Observable Dynamic Spectrum Access}}
+            % \end{twocolentryPub}
+
+            % \vspace{0.05 cm}
+
+            % \begin{twocolentryPub}{
+            %     {\footnotesize TWC 2024}
+            % }
+            %     {\footnotesize \textbf{Deep Reinforcement Learning for Dynamic Spectrum Access: Convergence Analysis}}
+            % \end{twocolentryPub}
+
+            % \vspace{0.05 cm}
+
+
+            \begin{twocolentryPub}{
+                {\footnotesize TWC 2023}
+            }
+                {\footnotesize \textbf{Federated Multi-Agent Deep Reinforcement Learning for Dynamic Spectrum Access}}
+            \end{twocolentryPub}
+
+            \vspace{0.05 cm}
+
+
+            \begin{twocolentryPub}{
+                {\footnotesize ToN 2022}
+            }
+                {\footnotesize \textbf{Decentralized Deep Reinforcement Learning Meets Mobility Load Balancing}}
+            \end{twocolentryPub}
+
+            \vspace{0.05 cm}
+
+            % \begin{twocolentryPub}{
+            %     {\footnotesize MILCOM 2022}
+            % }
+            %     {\footnotesize \textbf{MADRL Based Scheduling for 5G and Beyond}}
+            % \end{twocolentryPub}
+
+            % \vspace{0.05 cm}
+
+
+
+
+
+
+        \end{samepage}
+
+
+
+\end{document}
